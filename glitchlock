@@ -21,7 +21,6 @@ function datamoshF() {
     skip=$(shuf -i "$headerSize"-"$fileSize" -n 1)
     if [[ $CTR -eq 0 ]]
     then
-      FIRST=false
       skip=64
     fi
     # of=$file for progressive glitching
