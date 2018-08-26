@@ -33,11 +33,11 @@ function datamoshF() {
 
 # count of glitched images to create/use
 glitches=$(shuf -i 10-15 -n 1)
-for i in $(seq 1 $glitches);do datamoshF "$file"; done
+for i in $(seq 1 $glitches);do datamoshF; done
 
 PARAM=(--veriftext="" --wrongtext="" --noinputtext="" --slideshow-interval 0.19 --slideshow-random-selection --refresh-rate 0.1)
 
 rm $file &> /dev/null
 
-i3lock -n -u "${PARAM[@]}" -i "/tmp/glitchlock/" &> /dev/null
+i3lock -u "${PARAM[@]}" -i "/tmp/glitchlock/" &> /dev/null
 rm -r /tmp/glitchlock/ &> /dev/null
